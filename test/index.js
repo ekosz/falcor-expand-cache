@@ -3,7 +3,7 @@ import expect from 'expect';
 
 describe('falcor-expand-cache', () => {
   it('expands an empty cache into an empty object', () => {
-    return expand({}).then(obj => expect(obj).toEqual({}));
+    expect(expand({}).anything).toEqual(undefined);
   });
 
   it('transforms atoms into their value', () => {
@@ -18,9 +18,7 @@ describe('falcor-expand-cache', () => {
       },
     };
 
-    return expand(cache).then(obj => expect(obj).toEqual({
-      foobar: { name: 'Foobar' },
-    }));
+    expect(expand(cache).foobar.name).toEqual('Foobar');
   });
 
   it('sets atoms with no value to undefined', () => {
@@ -33,9 +31,7 @@ describe('falcor-expand-cache', () => {
       },
     };
 
-    return expand(cache).then(obj => expect(obj).toEqual({
-      foobar: { name: undefined },
-    }));
+    expect(expand(cache).foobar.name).toEqual(undefined);
   });
 
   it('follows refs', () => {
@@ -44,15 +40,16 @@ describe('falcor-expand-cache', () => {
       baz: { $type: 'atom', value: 'abc' },
     };
 
-    return expand(cache).then(obj => expect(obj).toEqual({
-      foobar: 'abc',
-      baz: 'abc',
-    }));
+    const expanded = expand(cache);
+
+    expect(expanded.baz).toEqual('abc');
+    expect(expanded.foobar).toEqual('abc');
   });
 
   it('can perform a big integration test', () => {
-    return expand(require('./fixture.json')).then(obj => {
-      console.log(JSON.stringifiy(obj, null, 2));
-    });
+    const expanded = expand(require('./fixture.json'));
+
+    expect(expanded.my.activeGoals[0].name).toEqual('Add 2 additional payment methods');
+    expect(expanded.my.company.name).toEqual('Pied Piper');
   });
 });

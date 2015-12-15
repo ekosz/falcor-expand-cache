@@ -1,33 +1,33 @@
 export default function expandCache(cache) {
   function followPath(path) {
     return path.reduce((acc, part) => {
-      if (acc && acc[part]) return acc[part];
+      if (acc && acc[part]) {
+        return acc[part];
+      }
 
       return undefined;
     }, cache);
   }
 
   function expandChild(child) {
-    if (child.$type === 'atom') {
-      return child.value;
-    }
+    if (child.$type === 'atom') return child.value;
+    if (child.$type === 'ref') return createNode(followPath(child.value));
 
-    if (child.$type === 'ref') {
-      return expandNode(followPath(child.value)); // eslint-disable-line no-use-before-define
-    }
-
-    return undefined;
+    return createNode(child);
   }
 
-  function expandNode(node) {
-    if (!node) return node;
-    if (node.$type) return expandChild(node);
+  function createNode(data) {
+    if (data.$type) return expandChild(data);
+    const node = {};
 
-    return Object.keys(node).reduce((acc, key) => {
-      acc[key] = expandNode(node[key]);
-      return acc;
-    }, {});
+    Object.keys(data).forEach(key => {
+      Object.defineProperty(node, key, {
+        get: () => expandChild(data[key]),
+      });
+    });
+
+    return node;
   }
 
-  return Promise.resolve(expandNode(cache));
+  return createNode(cache);
 }
