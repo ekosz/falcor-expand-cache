@@ -25,6 +25,7 @@ export default function expandCache(cache) {
 
     Object.keys(data).forEach(key => {
       Object.defineProperty(node, key, {
+        enumerable: true,
         get: () => expandChild(data[key]),
       });
     });
