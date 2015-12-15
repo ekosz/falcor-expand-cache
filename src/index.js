@@ -22,11 +22,19 @@ export default function expandCache(cache) {
   function createNode(data) {
     if (data.$type) return expandChild(data);
     const node = {};
+    const nodeCache = {};
 
     Object.keys(data).forEach(key => {
       Object.defineProperty(node, key, {
         enumerable: true,
-        get: () => expandChild(data[key]),
+        get: () => {
+          if (key in nodeCache) {
+            return nodeCache[key];
+          }
+
+          nodeCache[key] = expandChild(data[key]);
+          return nodeCache[key];
+        },
       });
     });
 

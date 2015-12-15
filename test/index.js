@@ -54,6 +54,28 @@ describe('falcor-expand-cache', () => {
     expect(expand(cache).foobar).toBeA(Error);
   });
 
+  it('memoizes objects', () => {
+    const cache = {
+      very: {
+        deeply: {
+          nested: {
+            thing: {
+              $type: 'atom',
+              value: 'foobar',
+            },
+          },
+        },
+      },
+    };
+
+    const expanded = expand(cache);
+
+    expect(expanded.very).toBe(expanded.very);
+    expect(expanded.very.deeply).toBe(expanded.very.deeply);
+    expect(expanded.very.deeply.nested).toBe(expanded.very.deeply.nested);
+    expect(expanded.very.deeply.nested.thing).toBe(expanded.very.deeply.nested.thing);
+  });
+
   it('can perform a big integration test', () => {
     const expanded = expand(require('./fixture.json'));
 
