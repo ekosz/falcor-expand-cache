@@ -46,6 +46,14 @@ describe('falcor-expand-cache', () => {
     expect(expanded.foobar).toEqual('abc');
   });
 
+  it('transforms errors correctly', () => {
+    const cache = {
+      foobar: { $type: 'error', value: 'Something went wrong' },
+    };
+
+    expect(expand(cache).foobar).toBeA(Error);
+  });
+
   it('can perform a big integration test', () => {
     const expanded = expand(require('./fixture.json'));
 

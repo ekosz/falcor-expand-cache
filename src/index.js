@@ -12,6 +12,9 @@ export default function expandCache(cache) {
   function expandChild(child) {
     if (child.$type === 'atom') return child.value;
     if (child.$type === 'ref') return createNode(followPath(child.value));
+    if (child.$type === 'error') return new Error(child.value);
+    // Unknown Sentinel
+    if (child.$type) return undefined;
 
     return createNode(child);
   }
