@@ -1,0 +1,544 @@
+{
+  "companiesBySlug": {
+    "piedpiper": {
+      "$type": "ref",
+      "value": [
+        "companiesById",
+        "f52aef96-9875-11e5-8621-0bdb2d31134c"
+      ],
+      "$size": 52
+    }
+  },
+  "companiesById": {
+    "f52aef96-9875-11e5-8621-0bdb2d31134c": {
+      "id": {
+        "$type": "atom",
+        "value": "f52aef96-9875-11e5-8621-0bdb2d31134c",
+        "$modelCreated": true,
+        "$size": 86
+      },
+      "name": {
+        "$type": "atom",
+        "value": "Pied Piper",
+        "$modelCreated": true,
+        "$size": 60
+      },
+      "logo_file_name": {
+        "$type": "atom",
+        "value": "logos/c81cdfce-979d-11e5-9aaf-93753d7ae2ba/b6d4b7c3-c33c-49df-b5b2-129881e653b5.png",
+        "$modelCreated": true,
+        "$size": 143
+      },
+      "activeGoals": {
+        "length": {
+          "$type": "atom",
+          "value": 0,
+          "$modelCreated": true,
+          "$size": 51
+        }
+      }
+    }
+  },
+  "my": {
+    "$type": "ref",
+    "value": [
+      "usersById",
+      "f60ab32e-9875-11e5-862a-ef495249b1c5"
+    ],
+    "$size": 52
+  },
+  "usersById": {
+    "f60ab32e-9875-11e5-862a-ef495249b1c5": {
+      "id": {
+        "$type": "atom",
+        "value": "f60ab32e-9875-11e5-862a-ef495249b1c5",
+        "$modelCreated": true,
+        "$size": 86
+      },
+      "email": {
+        "$type": "atom",
+        "value": "carla@piedpiper.com",
+        "$modelCreated": true,
+        "$size": 69
+      },
+      "unreadNotifications": {
+        "length": {
+          "$expires": 1450137636643,
+          "$type": "atom",
+          "value": 0,
+          "$size": 51
+        }
+      },
+      "activeGoals": {
+        "0": {
+          "$type": "ref",
+          "value": [
+            "goalsById",
+            "b0f703ea-9880-11e5-addb-b3e23d318091"
+          ],
+          "$size": 52
+        },
+        "1": {
+          "$type": "ref",
+          "value": [
+            "goalsById",
+            "25424c78-9881-11e5-ac18-cb95899ebde4"
+          ],
+          "$size": 52
+        },
+        "2": {
+          "$type": "ref",
+          "value": [
+            "goalsById",
+            "a20d58c4-9881-11e5-bf3d-ff329ff85c88"
+          ],
+          "$size": 52
+        },
+        "length": {
+          "$type": "atom",
+          "value": 3,
+          "$modelCreated": true,
+          "$size": 51
+        }
+      },
+      "reports": {
+        "length": {
+          "$type": "atom",
+          "value": 0,
+          "$modelCreated": true,
+          "$size": 51
+        }
+      },
+      "siblings": {
+        "length": {
+          "$type": "atom",
+          "value": 0,
+          "$modelCreated": true,
+          "$size": 51
+        }
+      },
+      "permission_level": {
+        "$type": "atom",
+        "value": "normal",
+        "$modelCreated": true,
+        "$size": 56
+      },
+      "company": {
+        "$type": "ref",
+        "value": [
+          "companiesById",
+          "f52aef96-9875-11e5-8621-0bdb2d31134c"
+        ],
+        "$size": 52
+      },
+      "favorites": {
+        "0": {
+          "$type": "ref",
+          "value": [
+            "favoritesById",
+            "0dbfcbac-9881-11e5-ac17-bff542743eb4"
+          ],
+          "$size": 52
+        },
+        "length": {
+          "$type": "atom",
+          "value": 1,
+          "$modelCreated": true,
+          "$size": 51
+        }
+      },
+      "name": {
+        "$type": "atom",
+        "value": "Carla Walton",
+        "$modelCreated": true,
+        "$size": 62
+      },
+      "title": {
+        "$type": "atom",
+        "value": "Platform Engineer",
+        "$modelCreated": true,
+        "$size": 67
+      },
+      "bio": {
+        "$type": "atom",
+        "value": "Carla Walton has degrees from Rice and Carnegie Mellon, if that’s okay with you. She joined Pied Piper as a platform engineer in 2015. Before that, she did the whole Oracle thing for a while, then was head of engineering at Earcast, where she built the whole system on her own, despite budgetary constraints and general, all-around lameness and suckage. In her spare time, she created Hellacast, a live-streaming site that uses next-gen codecs like VP9 and p2p sharing technology and broadcasts her ex-roommate’s web series, a soap opera about animal liberation starring puppets.",
+        "$modelCreated": true,
+        "$size": 629
+      },
+      "created_at": {
+        "$type": "atom",
+        "value": "2015-12-01T21:53:28.631263",
+        "$modelCreated": true,
+        "$size": 76
+      },
+      "avatar_file_name": {
+        "$type": "atom",
+        "value": "avatars/fbeaed6a-97ce-11e5-b562-f7d5a56a7c7a/6743c2ac-01ef-4641-a49f-cea5d2d32271.jpg",
+        "$modelCreated": true,
+        "$size": 148
+      },
+      "location": {
+        "$type": "ref",
+        "value": [
+          "locationsById",
+          "f99c3b34-9875-11e5-8c23-bb8a91022655"
+        ],
+        "$size": 52
+      },
+      "pastGoals": {
+        "0": {
+          "id": {
+            "$type": "atom",
+            "$size": 51
+          }
+        },
+        "1": {
+          "id": {
+            "$type": "atom",
+            "$size": 51
+          }
+        },
+        "2": {
+          "id": {
+            "$type": "atom",
+            "$size": 51
+          }
+        },
+        "3": {
+          "id": {
+            "$type": "atom",
+            "$size": 51
+          }
+        },
+        "4": {
+          "id": {
+            "$type": "atom",
+            "$size": 51
+          }
+        },
+        "length": {
+          "$type": "atom",
+          "$size": 51
+        }
+      },
+      "manager": {
+        "$type": "ref",
+        "value": [
+          "usersById",
+          "f5d58dc0-9875-11e5-8628-376054eb4565"
+        ],
+        "$size": 52
+      }
+    },
+    "f5d58dc0-9875-11e5-8628-376054eb4565": {
+      "avatar_file_name": {
+        "$type": "atom",
+        "value": "avatars/fbeaed6a-97ce-11e5-b562-f7d5a56a7c7a/994c0e1c-e663-489e-bba4-4c37426ae111.jpeg",
+        "$modelCreated": true,
+        "$size": 151
+      },
+      "email": {
+        "$type": "atom",
+        "value": "dinesh@piedpiper.com",
+        "$modelCreated": true,
+        "$size": 70
+      },
+      "id": {
+        "$type": "atom",
+        "value": "f5d58dc0-9875-11e5-8628-376054eb4565",
+        "$modelCreated": true,
+        "$size": 86
+      },
+      "name": {
+        "$type": "atom",
+        "value": "Dinesh Chugtai",
+        "$modelCreated": true,
+        "$size": 64
+      },
+      "title": {
+        "$type": "atom",
+        "value": "Programmer, Co-CTO",
+        "$modelCreated": true,
+        "$size": 68
+      }
+    }
+  },
+  "locationsById": {
+    "f99c3b34-9875-11e5-8c23-bb8a91022655": {
+      "city": {
+        "$type": "atom",
+        "value": "Palo Alto",
+        "$modelCreated": true,
+        "$size": 59
+      },
+      "state": {
+        "$type": "atom",
+        "value": "CA",
+        "$modelCreated": true,
+        "$size": 52
+      },
+      "time_zone_id": {
+        "$type": "atom",
+        "value": "America/Los_Angeles",
+        "$modelCreated": true,
+        "$size": 69
+      }
+    }
+  },
+  "goalsById": {
+    "25424c78-9881-11e5-ac18-cb95899ebde4": {
+      "id": {
+        "$type": "atom",
+        "value": "25424c78-9881-11e5-ac18-cb95899ebde4",
+        "$modelCreated": true,
+        "$size": 86
+      },
+      "status": {
+        "$type": "atom",
+        "value": "green",
+        "$modelCreated": true,
+        "$size": 55
+      },
+      "name": {
+        "$type": "atom",
+        "value": "Host first Pied Piper Hackathon",
+        "$modelCreated": true,
+        "$size": 81
+      },
+      "ended_at": {
+        "$type": "atom",
+        "value": "2016-02-01T08:00:00",
+        "$modelCreated": true,
+        "$size": 69
+      },
+      "type": {
+        "$type": "atom",
+        "value": "qualitative",
+        "$modelCreated": true,
+        "$size": 61
+      },
+      "progress_amount": {
+        "$type": "atom",
+        "value": null,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "goal_amount": {
+        "$type": "atom",
+        "value": null,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "completed_milestones": {
+        "$type": "atom",
+        "value": null,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "total_milestones": {
+        "$type": "atom",
+        "value": null,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "users": {
+        "0": {
+          "$type": "ref",
+          "value": [
+            "usersById",
+            "f60ab32e-9875-11e5-862a-ef495249b1c5"
+          ],
+          "$size": 52
+        },
+        "1": {
+          "$type": "atom",
+          "$size": 51
+        },
+        "2": {
+          "$type": "atom",
+          "$size": 51
+        }
+      }
+    },
+    "a20d58c4-9881-11e5-bf3d-ff329ff85c88": {
+      "id": {
+        "$type": "atom",
+        "value": "a20d58c4-9881-11e5-bf3d-ff329ff85c88",
+        "$modelCreated": true,
+        "$size": 86
+      },
+      "status": {
+        "$type": "atom",
+        "value": "red",
+        "$modelCreated": true,
+        "$size": 53
+      },
+      "name": {
+        "$type": "atom",
+        "value": "Reduce server and software spend by 40%",
+        "$modelCreated": true,
+        "$size": 89
+      },
+      "ended_at": {
+        "$type": "atom",
+        "value": "2016-04-01T07:00:00",
+        "$modelCreated": true,
+        "$size": 69
+      },
+      "type": {
+        "$type": "atom",
+        "value": "quantitative",
+        "$modelCreated": true,
+        "$size": 62
+      },
+      "progress_amount": {
+        "$type": "atom",
+        "value": 3,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "goal_amount": {
+        "$type": "atom",
+        "value": 40,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "completed_milestones": {
+        "$type": "atom",
+        "value": null,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "total_milestones": {
+        "$type": "atom",
+        "value": null,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "users": {
+        "0": {
+          "$type": "ref",
+          "value": [
+            "usersById",
+            "f60ab32e-9875-11e5-862a-ef495249b1c5"
+          ],
+          "$size": 52
+        },
+        "1": {
+          "$type": "atom",
+          "$size": 51
+        },
+        "2": {
+          "$type": "atom",
+          "$size": 51
+        }
+      }
+    },
+    "b0f703ea-9880-11e5-addb-b3e23d318091": {
+      "id": {
+        "$type": "atom",
+        "value": "b0f703ea-9880-11e5-addb-b3e23d318091",
+        "$modelCreated": true,
+        "$size": 86
+      },
+      "name": {
+        "$type": "atom",
+        "value": "Add 2 additional payment methods",
+        "$modelCreated": true,
+        "$size": 82
+      },
+      "status": {
+        "$type": "atom",
+        "value": "amber",
+        "$modelCreated": true,
+        "$size": 55
+      },
+      "avatar_file_name": {
+        "$type": "atom",
+        "$size": 51
+      },
+      "email": {
+        "$type": "atom",
+        "$size": 51
+      },
+      "ended_at": {
+        "$type": "atom",
+        "value": "2016-04-01T07:00:00",
+        "$modelCreated": true,
+        "$size": 69
+      },
+      "type": {
+        "$type": "atom",
+        "value": "qualitative",
+        "$modelCreated": true,
+        "$size": 61
+      },
+      "progress_amount": {
+        "$type": "atom",
+        "value": null,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "goal_amount": {
+        "$type": "atom",
+        "value": null,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "completed_milestones": {
+        "$type": "atom",
+        "value": 1,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "total_milestones": {
+        "$type": "atom",
+        "value": 2,
+        "$modelCreated": true,
+        "$size": 51
+      },
+      "users": {
+        "0": {
+          "$type": "ref",
+          "value": [
+            "usersById",
+            "f60ab32e-9875-11e5-862a-ef495249b1c5"
+          ],
+          "$size": 52
+        },
+        "1": {
+          "$type": "atom",
+          "$size": 51
+        },
+        "2": {
+          "$type": "atom",
+          "$size": 51
+        }
+      }
+    }
+  },
+  "favoritesById": {
+    "0dbfcbac-9881-11e5-ac17-bff542743eb4": {
+      "thing": {
+        "$type": "ref",
+        "value": [
+          "goalsById",
+          "b0f703ea-9880-11e5-addb-b3e23d318091"
+        ],
+        "$size": 52
+      },
+      "fav_type": {
+        "$type": "atom",
+        "value": "goal",
+        "$modelCreated": true,
+        "$size": 54
+      },
+      "id": {
+        "$type": "atom",
+        "value": "0dbfcbac-9881-11e5-ac17-bff542743eb4",
+        "$modelCreated": true,
+        "$size": 86
+      }
+    }
+  }
+}
