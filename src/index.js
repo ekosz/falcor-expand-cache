@@ -20,6 +20,7 @@ export default function expandCache(cache) {
   }
 
   function createNode(data) {
+    if (!data) return undefined;
     if (data.$type) return expandChild(data);
     const node = {};
     const nodeCache = {};
