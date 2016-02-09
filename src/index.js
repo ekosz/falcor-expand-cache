@@ -15,8 +15,10 @@ export default function expandCache(cache) {
     if (child.$type === 'error') return new Error(child.value);
     // Unknown Sentinel
     if (child.$type) return undefined;
-
-    return createNode(child);
+    if (typeof child === 'object') {
+      return createNode(child);
+    }
+    return child;
   }
 
   function createNode(data) {

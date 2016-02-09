@@ -82,4 +82,15 @@ describe('falcor-expand-cache', () => {
     expect(expanded.my.activeGoals[0].name).toEqual('Add 2 additional payment methods');
     expect(expanded.my.company.name).toEqual('Pied Piper');
   });
+
+  it('can expand a simple object', () => {
+    const expanded = expand(require('./simple_object.json'));
+    const product = expanded.productsById['id-string-1234'];
+
+    expect(product.id).toEqual('id-string-1234');
+    expect(product.name).toEqual('Sample Product Name');
+    expect(product.image).toEqual('http://zpalexander.com/wp-content/uploads/2014/12/bomb-omb.jpg');
+    expect(product.slug).toEqual('sample-product-name');
+    expect(product.upc).toEqual('123409876');
+  });
 });
