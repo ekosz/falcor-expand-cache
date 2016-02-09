@@ -1,0 +1,11 @@
+{
+  "productsById": {
+    "id-string-1234": {
+      "id": "id-string-1234",
+      "image": "http://zpalexander.com/wp-content/uploads/2014/12/bomb-omb.jpg",
+      "name": "Sample Product Name",
+      "slug": "sample-product-name",
+      "upc": "123409876"
+    }
+  }
+}
