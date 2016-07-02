@@ -76,6 +76,22 @@ describe('falcor-expand-cache', () => {
     expect(expanded.very.deeply.nested.thing).toBe(expanded.very.deeply.nested.thing);
   });
 
+  it('can handle strings', () => {
+    const cache = {
+      article: {
+        title: 'Hello',
+        body: 'World',
+      },
+      articleRef: {
+        $type: 'ref',
+        value: ['article'],
+      },
+    };
+
+    const expanded = expand(cache);
+    expect(expanded.articleRef.title).toBe(expanded.article.title);
+  });
+
   it('can perform a big integration test', () => {
     const expanded = expand(require('./fixture.json'));
 
