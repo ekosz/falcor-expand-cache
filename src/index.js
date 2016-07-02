@@ -21,6 +21,7 @@ export default function expandCache(cache) {
 
   function createNode(data) {
     if (!data) return undefined;
+    if (typeof data !== 'object' && typeof data !== 'function') return data;
     if (data.$type) return expandChild(data);
     const node = {};
     const nodeCache = {};
